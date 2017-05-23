@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/desk.css" rel="stylesheet" type="text/css">
+    <script src="script/jquery.js" type="text/javascript"></script>
+    <script src="script/notify.min.js" type="text/javascript"></script>
+    <script src="script/script.js" type="text/javascript"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <title>Code</title>
+</head>
+
+<body>
+    <div id="offMode">
+        <div id="on"></div>
+    </div>
+    <div id="areaFoto">
+        <div id="Image"></div>
+    </div>
+    <div id="changeUser">
+        <div id="areaUser">
+            <h1>Escolha o usuário para entrar no sistema</h1>
+            <button id="escolher">Entrar</button>
+        </div>
+    </div>
+    <video autoplay loop class="bg">
+        <source type="video/mp4">
+    </video>
+        <div id="bgVideo">
+            <div id="bgFoto"></div>
+            <div id="bgTemp"></div>
+            <div id="allConfig">
+                <i id="config"></i>
+                <main>
+                    <h1>
+                            Configurações
+                        </h1>
+                    <p>Alterar visual do sistema</p>
+                    <section>
+                        <h2>Imagens</h2>
+                        <div class="opConfig">
+                            <ul id="liImagem">
+                                <li id="rpg"></li>
+                                <li id="jn"></li>
+                                <li id="darksouls"></li>
+                                <li id="zelda"></li>
+                                <li id="metroid"></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Vídeo</h2>
+                        <div class="opConfig">
+                            <ul id="liVideo">
+                                <li id="tron"></li>
+                                <li id="aurora"></li>
+                                <li id="carrossel"></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Cores</h2>
+                        <div class="opConfig">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label>
+                                            Ícones:
+                                            <input type="color" id="corIcone">
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <button id="alterarIcon">Alterar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>
+                                            Fundo:
+                                            <input type="color" id="corFundo">
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <button id="alterarFundo">Alterar</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                    <button id="reset">Resetar</button>
+                    <button id="salvar">Salvar alterações</button>
+                </main>
+            </div>
+            <div id="date">
+                <p>
+                    Bem-vindo, <span id="userName"></span>
+                    <br>
+                    <span></span>
+                    <br>
+                    <span></span>
+                </p>
+            </div>
+            <nav>
+                <ul>
+                    <li title="Trocar usuário" id="home" class="1"></li>
+                    <li title="Fotos" id="fotos" class="2"></li>
+                    <li title="Vídeo" id="videos" class="3"></li>
+                    <li title="Música" id="musicas" class="4"></li>
+                    <li title="Games" id="games" class="5"></li>
+                    <li title="Desligar" id="off" class="6"></li>
+                </ul>
+            </nav>
+            <!-- Area das div -->
+            <div id="divs">
+            </div>
+        </div>
+        
+    <!-- area miniminzada -->
+    <div id="areaMini">
+        <ul>
+        </ul>
+    </div>
+    <div id="miniPlay">
+        <ul>
+            <li onclick="antm()" id="ant" title="Música anterior"></li>
+            <li onclick="playpa(this)" id="playpa" title="Play/Pause"></li>
+            <li onclick="proxm()" id="next" title="Próxima música"></li>
+            <li onclick="expa()" id="expa" title="Expandir janela"></li>
+        </ul>
+    </div>
+    <img id="preImg" alt="" src="" hidden>
+</body>
+
+</html>

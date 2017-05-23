@@ -1,0 +1,699 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#bgTemp, #bgVideo, #bgFoto {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#offMode {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 10;
+}
+
+#on {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/on.png);
+    opacity: .6;
+    transition: .3s;
+    cursor: pointer;
+}
+
+#on:hover {
+    opacity: 1;
+}
+
+.bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width:100%;
+    height: 100%;
+    z-index: -10;
+    transition: 1s;
+}
+
+nav {
+    width: 960px;
+    height: 150px;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    margin-left: -480px;
+    margin-top: -75px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: table;
+    list-style-type: none;
+}
+
+nav li {
+    width: 120px;
+    margin: 10px 20px;
+    height: 130px;
+    background-position: center center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    float: left;
+    transition: .2s;
+    opacity: .4;
+    cursor: pointer;
+}
+
+#allConfig {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    left: -290px;
+    top: 0;
+    background-color: rebeccapurple;
+    padding: 0 20px;
+    transition: .3s;
+    z-index: 10;
+}
+
+#config {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    float: none;
+    right: -100px;
+    top: 0;
+    margin: 0;
+    background-size: 50px;
+    transition: .5s;
+    opacity: .4;
+}
+
+#config:hover {
+    -ms-transform: rotate(180deg);
+    /* IE 9 */
+    -webkit-transform: rotate(180deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+#date {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+#date p {
+    margin: 0;
+    text-align: right;
+}
+
+#config,
+#home,
+#fotos,
+#videos,
+#musicas,
+#games,
+#off {
+    -webkit-mask-repeat: no-repeat;
+    -o-mask-repeat: no-repeat;
+    -moz-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center center;
+    -o-mask-position: center center;
+    -moz-mask-position: center center;
+    mask-position: center center;
+    background-color: #fff;
+}
+
+#config {
+    -webkit-mask-image: url(../img/op.png);
+    -o-mask-image: url(../img/op.png);
+    -moz-mask-image: url(../img/op.png);
+    mask-image: url(../img/op.png);
+}
+
+#home {
+    -webkit-mask-image: url(../img/01.png);
+    -o-mask-image: url(../img/01.png);
+    -moz-mask-image: url(../img/01.png);
+    mask-image: url(../img/01.png);
+}
+/* url(../img/01.png) */
+
+#fotos {
+    -webkit-mask-image: url(../img/03.png);
+    -o-mask-image: url(../img/03.png);
+    -moz-mask-image: url(../img/03.png);
+    mask-image: url(../img/03.png);
+}
+
+#videos {
+    -webkit-mask-image: url(../img/06.png);
+    -o-mask-image: url(../img/06.png);
+    -moz-mask-image: url(../img/06.png);
+    mask-image: url(../img/06.png);
+}
+
+#musicas {
+    -webkit-mask-image: url(../img/05.png);
+    -o-mask-image: url(../img/05.png);
+    -moz-mask-image: url(../img/05.png);
+    mask-image: url(../img/05.png);
+}
+
+#games {
+    -webkit-mask-image: url(../img/04.png);
+    -o-mask-image: url(../img/04.png);
+    -moz-mask-image: url(../img/04.png);
+    mask-image: url(../img/04.png);
+}
+
+#off {
+    -webkit-mask-image: url(../img/07.png);
+    -o-mask-image: url(../img/07.png);
+    -moz-mask-image: url(../img/07.png);
+    mask-image: url(../img/07.png);
+}
+
+.wr {
+    width: 700px;
+    height: 450px;
+    background-color: rebeccapurple;
+    position: absolute;
+    padding-top: 30px;
+    left: 50%;
+    top: 50%;
+    margin-left: -350px;
+    margin-top: -225px;
+    background-image: url(../img/bg.png);
+    transition: 0.4s;
+    opacity : 1;
+    z-index: 5;
+}
+
+.menuSuperior {
+    position: absolute;
+    width: 100%;
+    padding: 5px 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    top: 0;
+    z-index: 2;
+    margin:0 0 15px 0;
+    top:0;
+}
+
+.menuSuperior ul {
+    float: right;
+    height: 25px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.x {
+    float: left;
+    width: 30px;
+    height: 23px;
+    border: 1px solid orange;
+    transition: .2s;
+}
+
+.x:hover {
+    background-color: orange;
+}
+
+.mini {
+    float: left;
+    width: 30px;
+    height: 23px;
+    border: 1px solid orange;
+    transition: .2s;
+}
+
+.mini:hover {
+    background-color: orange;
+}
+
+#allConfig section {
+    border: 1px solid rgba(255, 255, 255, .3);
+    margin: 10px 0;
+    padding: 0 10px;
+    overflow: auto;
+    position: relative;
+}
+
+#allConfig section li {
+    width: 200px;
+    margin: 5px 0 10px 0;
+    display: block;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border: 1px solid grey;
+    transition: .3s;
+    cursor: pointer;
+}
+
+#allConfig section li:hover {
+    border: 1px solid blue;
+}
+
+main {
+    width: 100%;
+    height: 700px;
+}
+
+#rpg {
+    background-image: url(../img/rpg.png)
+}
+
+#jn {
+    background-image: url(../img/jn.jpg)
+}
+
+#darksouls {
+    background-image: url(../img/darksouls.jpg)
+}
+
+#zelda {
+    background-image: url(../img/zeldaWall.jpg)
+}
+
+#metroid {
+    background-image: url(../img/metroidWall2.jpg)
+}
+
+#tron {
+    background-image:url(../img/tron.png);
+}
+#aurora {
+    background-image:url(../img/aurora.png);
+}
+#carrossel {
+    background-image:url(../img/carrossel.png);
+}
+
+.opConfig {
+    padding: 10px 0;
+    overflow:auto;
+    min-height:100px;
+    max-height:300px;
+}
+
+section label {
+    width: 100%;
+    margin: 5px 0;
+    display: block;
+}
+
+#miniPlay li:hover {
+    opacity:1;
+}
+
+#ant {
+    background-image:url(../img/player1.png);
+}
+#next {
+    background-image:url(../img/player2.png);
+}#playpa {
+    background-image:url(../img/player3.png);
+}#expa {
+    background-image:url(../img/player4.png);
+}
+
+#miniPlay {
+    display: table;
+    left: 20px;
+    border-radius:5px;
+    background-color:#C3C3E5;
+    position: fixed;
+    bottom: 40px;
+    padding: 15px 10px;
+    list-style: none;
+    transition: 1s;
+}
+
+#miniPlay li {
+    display: inline-block;
+    cursor: pointer;
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+    width:24px;
+    height:24px;
+    margin:0 10px;
+    transition:0.2s;
+    float:left;
+    opacity:.8;
+}
+
+#video {
+    width: 95%;
+    margin:0px auto 10px auto;
+    display:block;
+    /*max-width:500px; */
+    height: auto;
+    cursor: pointer;
+    position:relative;
+}
+
+#listVid {
+    list-style: none;
+    width:50%;
+    margin:auto;
+}
+
+#listVid li {
+    display: inline-block;
+    margin:5px;
+    cursor: pointer;
+    margin-right: 5px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+#listVid li:hover {
+    background-color: rebeccapurple;
+}
+
+.menuSuperior ul li{
+    display: inline-block;
+}
+
+.minJanela{
+    width: 100px !important;
+    margin-left: -50px !important;
+    margin-top: -35px !important;
+    height : 35 !important;
+    top: 100% !important;
+    opacity: 0 !important;
+}
+
+.desfocada{
+    z-index: 1 !important;
+    opacity: 0.8 !important;
+}
+
+#igame{
+    width:100% !important;
+    height: 400px !important;
+    max-height: 400px !important;
+    border:0px solid orange;
+}
+
+#listGame {
+    width:50%;
+    text-align:center;
+    margin:5px auto;
+    list-style: none;
+}
+
+#listGame li {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 5px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+#listGame li:hover {
+    background-color: #336666;
+}
+
+#icon{
+    position: absolute;
+    float: left;
+    z-index: 2;
+    width: 180px;
+    height: auto;
+}
+
+#icon img{
+    width: 180px;
+    height: auto;
+}
+
+#vidInfo{
+    top:0;
+    width: 100%;
+    height: auto;
+    margin-right: auto;
+}
+
+
+#moregames, #morevideos {
+    width:200px;
+    font-weight:bold;
+    background-color:rebeccapurple;
+    color:#fff;
+    border:0;
+    margin:20px auto;
+    display:block;
+    padding:15px 10px;
+    cursor:pointer;
+}
+#listGame,#listVid {
+    display:none;
+    width:50%;
+}
+
+#listGame li {
+    width:100%;
+    margin:5px;
+    transition:.2s;
+    background-color:transparent;
+}
+/* música */
+section#musicPlayer {
+    display:table;
+    width:100%;
+    position:absolute;
+    overflow:hidden;
+}
+
+section#musicPlayer .musicPosition:first-child{
+    
+}
+
+section#musicPlayer .musicPosition:last-child {
+    height:420px;
+    overflow:auto;
+}
+
+section#musicPlayer .musicPosition:last-child li {
+    padding:5px;
+    transition:.3s;
+    border:1px 0 1px 0 solid white;
+}
+
+section#musicPlayer .musicPosition:last-child li:hover {
+    background-color:rebeccapurple;
+    cursor:pointer;
+}
+
+section#musicPlayer p, section#musicPlayer label {
+    text-align:center;
+}
+
+section#musicPlayer .musicPosition{
+    float:left;
+    padding:2%;
+    width:46%;
+}
+/* video */
+
+#songImg{
+     
+}
+
+#songImg img{
+    position: relative;
+    width: 200px;
+    height: auto;
+}
+
+#areaUser figure{
+    float: left;
+    cursor: pointer;
+    opacity:.8;
+    transition:.3s;
+}
+
+#areaUser figcaption{
+    text-align: center;
+    background-color: white;
+    color:black;
+    transition: 0.5s;
+}
+
+#areaUser figure:hover{
+    border-radius:3px;
+    opacity:1;
+    box-shadow:0 0 5px #fff;
+}
+
+.userAtivo{
+    box-shadow:0 0 10px #fff;
+    border-radius:3px;
+    opacity:1;
+}
+
+#wrapperNav {
+    width:98%;
+    display:block;
+    overflow:auto;
+    height:440px;
+    padding:5px 1%;
+}
+
+#changeUser {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,1);
+    transition:.2s;
+    z-index:100;
+}
+
+#areaUser {
+    position:relative;
+    width:580px;
+    height:310px;
+    top:50%;
+    left:50%;
+    margin-left:-290px;
+    margin-top:-155px;
+}
+
+#areaUser h1 {
+    margin:5px;
+    text-align:center;
+    font-size:18px;
+}
+#escolher {
+    width:100px;
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    padding:5px 15px;
+    margin-left: -65px;
+    color:#fff;
+    font-weight:bold;
+    font-family:"ubuntu";
+    background-color:rebeccapurple;
+    border:0;
+    cursor:pointer;
+}
+#alterarFundo, #alterarIcon{
+    border:0;
+    color:#fff;
+}
+
+#allConfig button, #mudar figcaption button {
+    border-radius:3px;
+    border:0;
+    font-family:"ubuntu";
+    color:#fff;
+    padding:7px;
+    cursor:pointer;
+    background-color:rebeccapurple;
+}
+
+#mudar figcaption button{
+    padding: 7px 20px !important;
+}
+
+#allConfig #reset, #allConfig #salvar {
+    display:block;
+    margin:5px auto;
+}
+
+#areaMini {
+    width:100%;
+    display:block;
+    margin:auto;
+    text-align:center;
+    height:30px;
+    position:fixed;
+    bottom:0;
+    padding:10px;
+}
+#areaMini ul {
+    display:table;
+    transform: translateX(25%);
+    -moz-transform: translateX(25%);
+    -webkit-transform: translateX(25%);
+    -oz-transform: translateX(25%);
+}
+.nmJanela {
+    width:200px;
+    height:30px;
+    margin:0 10px 0 0;
+    background-image:url(../img/bg.png);
+    padding:10px 0;
+    float:left;
+}
+#areaVideo {
+    width:100%;
+    height:400px;
+}
+#areaVideo video {
+    height:400px;
+    width:600px;
+    margin:auto;
+    display:block;
+}
+#areaFoto {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,.5);
+    z-index:10;
+    display:none;
+}
+#Image {
+    width:700px;
+    height:600px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-350px;
+    margin-top:-300px;
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:table;
+}

@@ -1,0 +1,23 @@
+{
+   "m":[{"nome":"Moonage Daydream",
+         "artista": "David Bowie",
+         "capa":"capa1.jpg",
+         "src":"1.mp3"
+        },
+        {"nome":"I'm Not in Love",
+         "artista": "10cc",
+         "capa":"capa2.jpg",
+         "src":"2.mp3"
+        },
+        {"nome":"Cherry Bomb",
+         "artista": "The Runaways",
+         "capa":"capa3.jpg",
+         "src":"3.mp3"
+        },
+        {"nome":"Ain't No Mountain High Enough",
+         "artista": "Marvin Gaye and Tammi Terrell",
+         "capa":"capa4.jpg",
+         "src":"4.mp3"
+        }
+    ]
+}
