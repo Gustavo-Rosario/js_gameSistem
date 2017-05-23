@@ -1,2 +1,2 @@
-# js_gameSistem
-A Sistem made with JavaScript and HTML5
+# js_gameSystem
+A System made with JavaScript and HTML5
