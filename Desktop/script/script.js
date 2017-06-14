@@ -5,7 +5,7 @@ var Notas = function(){
             var num = parseInt($("#userName").attr("class")) + 1;
             var notification = new Notification(titulo, {
                 dir: "auto",
-                icon: "https://tcs-ps3-luizero.c9users.io/Desktop/users/img/avatar0"+num+".png",
+                icon: "../users/img/avatar0"+num+".png",
                 lang: "",
                 duration: 5,
                 body: corpo,
@@ -16,7 +16,7 @@ var Notas = function(){
                 if(resp === "granted"){
                     var notification = new Notification(titulo, {
                         dir: "auto",
-                        icon: "https://tcs-ps3-luizero.c9users.io/Desktop/users/img/avatar0"+num+".png",
+                        icon: "..//users/img/avatar0"+num+".png",
                         lang: "",
                         duration: 5,
                         body: corpo,
@@ -213,7 +213,7 @@ function main() {
             //Mensagem notificando o user que a janela ja está aberta
             $(this).notify("Essa janela já está aberta", {position: "top", className:"info"});
         }else{
-            var path = "https://tcs-ps3-luizero.c9users.io/Desktop/views/" + menu + ".html";
+            var path = "/Desktop/views/" + menu + ".html";
             $.ajax({
                     url: path,
                     headers:{

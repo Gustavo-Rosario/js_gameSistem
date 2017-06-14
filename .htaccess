@@ -1,0 +1,3 @@
+RewriteEngine On
+#ErrorDocument 404 /view/error.php
+#RewriteRule ^error? /view/error.php
