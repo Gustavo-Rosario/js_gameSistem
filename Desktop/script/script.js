@@ -42,6 +42,22 @@ $(main);
 
 function main() {
     
+    //Teste de carregamento de opcoes a partir de arquivo json
+    $.getJSON("/Desktop/img/.wallpaper.json", function(data) {
+            data.wall.forEach(function(e, i) {
+                $("#liImagem").append("<li onclick='changeWall(this)' id='"+e.nome+"' style='background-image: url(img/"+e.img+")'></li>");
+                
+            });
+        })
+        .done(function() {
+            //Em caso de sucesso 
+            console.log("Great - ImageList");
+        })
+        .fail(function() {
+            //Em caso de erro
+            console.log("Fail - ImageList");;
+        });
+    
 // Uso de um plugin disponível no site https://jqueryui.com/draggable/
     // Basta adicionar ".draggable()" para o determinado elemento
     $("#miniPlay").draggable();
@@ -69,7 +85,7 @@ function main() {
             all.css("left", "-290px");
             $(this).css("opacity", ".4");
         }
-    });
+    }); 
     
 // Alterar o plano de fundo do Desktop
     $("#allConfig #liImagem li").click(function() {
@@ -635,3 +651,15 @@ function aumentarImagem(obj){
        $(this).fadeOut();
     });
 }
+
+//------- Utils -----------------------------//
+function changeWall(t){
+        $("#allConfig #liImagem li").css("border", "1px solid grey");
+        $(t).css("border", "1px solid blue");
+        //$("#bgFoto").css("background-image", $(this).css("background-image")).fadeIn();
+        var pathImg = $(t).attr("style").split(":")[1].split(";")[0];
+        $("#bgFoto").css("background-image", pathImg );
+    //Atribui um valor ao alt do id preImg para funções posteriores
+        $("#preImg").attr("alt","1");
+        $(".bg").fadeOut();
+    }
