@@ -1,0 +1,33 @@
+
+<% include partials/header %>
+    <h1>Add a user</h1>
+    <% if(errors){%>
+        <ul>
+        <% errors.forEach((err)=>{%>
+            <li><%= err.msg %></li>
+        <% }) %>
+        </ul>
+    <% } %>
+    <form method="post" action="users/add" enctype="multipart/form-data">
+        <label>Name:</label>
+        <input type="text" name="first_name">
+        <br>
+        <label>Last:</label>
+        <input type="text" name="last_name">
+        <br>
+        <label>Email:</label>
+        <input type="email" name="email">
+        <br>
+        <label>Image:</label>
+        <input type="file" name="img">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    
+    <h1><%= title %></h1>
+    <ul>
+    <% users.forEach((user)=>{%>
+        <li><%= user.first_name %> - <a href="#" class="deleteUser" data-id="<%= user._id %>">Delete</a></li>
+    <% }) %>
+    </ul>
+<% include partials/footer %>

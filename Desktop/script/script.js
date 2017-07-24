@@ -42,7 +42,21 @@ $(main);
 
 function main() {
     
-    //Teste de carregamento de opcoes a partir de arquivo json
+    //Carregamento de Thema
+    $.getJSON("/Desktop/themes/theme.json", function(data){
+        data.t.forEach(function(e, i){
+            $("#liTema").append("<li onclick='changeTheme(this)' onmouseover='themeShowInfo("+e.name+", this)' on style='background-image: url(themes/"+e.name+"/"+e.cover+")'> <section class='themeInfo'></section> </li>");
+        });
+    }).done(function() {
+            //Em caso de sucesso 
+            console.log("Great - ThemeList");
+    })
+    .fail(function() {
+            //Em caso de erro
+            console.log("Fail - ThemeList");;
+    });
+    
+    //Carregamento de opcoes a partir de arquivo json
     $.getJSON("/Desktop/img/.wallpaper.json", function(data) {
             data.wall.forEach(function(e, i) {
                 $("#liImagem").append("<li onclick='changeWall(this)' id='"+e.nome+"' style='background-image: url(img/"+e.img+")'></li>");
@@ -71,8 +85,8 @@ function main() {
     hrdt();
     
 // Área de menu lateral - SlideToggle nas opções de menu
-    $("#allConfig section h2").click(function() {
-        $(this).next().slideToggle();
+    $("#allConfig section").click(function() {
+        $(this).find("h2").next().slideToggle();
     });
     
 // Ao clicar no botão de configurações, mover ao menu para disponibilizar a visão
@@ -628,6 +642,8 @@ function getUser(num){
     $.getJSON("/Desktop/users/info.json",function(data){
         $("#userName").html(data[num].nome).attr("class",num);
         $("nav li, #config").css("background-color", data[num].coricone);
+        $("#corIcone").val(rgbToHex(data[num].coricone));
+        $("#corFundo").val(rgbToHex(data[num].corfundo));
         $("#allConfig").css("background-color", data[num].corfundo);
         $("#preImg").attr("alt",data[num].tipo);
         if(data[num].tipo == 1){
@@ -654,12 +670,39 @@ function aumentarImagem(obj){
 
 //------- Utils -----------------------------//
 function changeWall(t){
-        $("#allConfig #liImagem li").css("border", "1px solid grey");
-        $(t).css("border", "1px solid blue");
-        //$("#bgFoto").css("background-image", $(this).css("background-image")).fadeIn();
-        var pathImg = $(t).attr("style").split(":")[1].split(";")[0];
-        $("#bgFoto").css("background-image", pathImg );
+    $("#allConfig #liImagem li").css("border", "1px solid grey");
+    $(t).css("border", "1px solid blue");
+    //$("#bgFoto").css("background-image", $(this).css("background-image")).fadeIn();
+    var pathImg = $(t).attr("style").split(":")[1].split(";")[0];
+    $("#bgFoto").css("background-image", pathImg );
     //Atribui um valor ao alt do id preImg para funções posteriores
-        $("#preImg").attr("alt","1");
-        $(".bg").fadeOut();
-    }
+    $("#preImg").attr("alt","1");
+    $(".bg").fadeOut();
+}
+
+function changeTheme(t){
+    $("#allConfig #liImagem li").css("border", "1px solid grey");
+    $(t).css("border", "1px solid blue");
+    //$("#bgFoto").css("background-image", $(this).css("background-image")).fadeIn();
+    var contentTheme = $(t).html();
+    $("#bgFoto").css("background-image", "" );
+    $("#bgFoto").html(contentTheme);
+    //Atribui um valor ao alt do id preImg para funções posteriores
+    $("#preImg").attr("alt","3");
+    $(".bg").fadeOut();
+}
+
+function themeShowInfo(themeName, t){
+    $.getJSON("/Desktop/themes/theme.json", function(data){
+        $(t)
+        //data.t[themeName].
+    });
+}
+
+function rgbToHex(rgb){
+    rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
+    return (rgb && rgb.length === 4) ? 
+    "#" + ("0" + parseInt(rgb[1],10).toString(16)).slice(-2) +
+    ("0" + parseInt(rgb[2],10).toString(16)).slice(-2) +
+    ("0" + parseInt(rgb[3],10).toString(16)).slice(-2) : '';
+}

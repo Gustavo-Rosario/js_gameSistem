@@ -1,0 +1,114 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  color: #ffffff;
+  background: #001426 url("../img/bg-pattern.png");
+}
+
+a {
+  color: #196a74;
+  text-decoration: none;
+}
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+.cd-background-wrapper {
+  background-color: #001426;
+  position: relative;
+  overflow: hidden;
+  -webkit-perspective: 4000px;
+  perspective: 4000px;
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+
+.cd-floating-background {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.cd-floating-background.is-absolute {
+  position: absolute;
+}
+.cd-floating-background img:not(:first-child) {
+  display: block;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* fixes a Firefox bug - images not correctly rendered*/
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+.cd-floating-background img:not(:first-child) {
+  position: absolute;
+ 
+}
+/*Fundo*/
+.cd-floating-background img:first-child {	
+   width:100%;
+  -webkit-transform: translateZ(50px);
+  -ms-transform: translateZ(50px);
+  transform: translateZ(50px);
+}
+/*Zelda*/
+.cd-floating-background img:nth-child(2) {
+  width:50%;
+  -webkit-transform: translateZ(290px);
+  -ms-transform: translateZ(290px);
+  transform: translateZ(290px);
+  bottom: 5%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+/*Folha 1*/
+.cd-floating-background img:nth-child(3) {
+   width:60%;
+   top: 10%;
+   left: 5%;
+  -webkit-transform: translateZ(400px);
+  -ms-transform: translateZ(400px);
+  transform: translateZ(400px);
+}
+/*Folha 2*/
+.cd-floating-background img:nth-child(4) {
+   width:70%;
+   top: 0%;
+   left: 25%;
+  -webkit-transform: translateZ(520px);
+  -ms-transform: translateZ(520px);
+  transform: translateZ(520px);
+}
+/*Folha 3*/
+.cd-floating-background img:nth-child(5) {
+   width:65%;
+   top: 30%;
+   left: 20%;
+  -webkit-transform: translateZ(450px);
+  -ms-transform: translateZ(450px);
+  transform: translateZ(450px);
+}
+.no-preserve-3d .cd-floating-background {
+  /* we target browsers that don't support preserve-3d and show just a standard image - no effect visible */
+  position: relative;
+}

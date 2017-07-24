@@ -1,0 +1,20 @@
+{
+    "v":[
+            {"nome"   : "New Super Mario Bros. 2",
+              "poster": "marioPoster.jpg",
+              "src"   : "mario.mp4"
+             },
+             {"nome"  : "The Legend of Zelda Skyward Sword",
+              "poster": "zeldaPoster.jpg",
+              "src"   : "zelda.mp4"
+             },
+             {"nome"  : "Donkey Kong Country Returns",
+              "poster": "dkPoster.png",
+              "src"   : "dk.mp4"
+             },
+             {"nome"  : "Metroid Other M",
+              "poster": "metroidPoster.jpg",
+              "src"   : "metroid.mp4"
+             }
+         ]
+}

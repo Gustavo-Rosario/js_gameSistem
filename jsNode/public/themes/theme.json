@@ -1,0 +1,14 @@
+{
+    
+    "t":[
+           
+           {
+                "name"      : "zelda",
+                "page"      : "index.html",
+                "cover"     : "zeldaBOWCover.jpg",
+                "content"   : "<iframe src='themes/zelda/index.html' width='100%' height='100%' ></iframe>"
+                
+            }
+        ]
+    
+}

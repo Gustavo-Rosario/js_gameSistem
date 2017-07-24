@@ -1,0 +1,28 @@
+{
+    "g":[
+            {"nome" : "Super Mario Advance 4",
+             "icon" : "marioIcon.png",
+             "fundo": "marioFundo.mp4",
+             "wall" : "marioWall.jpg",
+             "src"  : "supermarioadvance4"  
+            },
+            {"nome" : "Metroid Fusion",
+             "icon" : "samusIcon2.png",
+             "fundo": "metroidFundo.mp4",
+             "wall" : "metroidWall.jpg",
+             "src"  : "metroid_fusion"  
+            },
+            {"nome" : "Megaman Zero",
+             "icon" : "zeroIcon2.png",
+             "fundo": "mmzFundo.mp4",
+             "wall" : "mmzWall.jpg",
+             "src"  : "megaman_zero1" 
+            },
+            {"nome" : "The Legend of Zelda - The Minish Cap",
+             "icon" : "zeldaIcon.png",
+             "fundo": "zeldaFundo.mp4",
+             "wall" : "zeldaWall2.jpg",
+             "src"  : "zelda_minish" 
+            }
+        ]
+}

@@ -1,0 +1,25 @@
+{
+    "wall":[
+                {"nome"     : "rpg",
+                 "img"      : "rpg.png"
+                },
+                {"nome"     : "jn",
+                 "img"      : "jn.jpg"
+                },
+                {"nome"     : "darksouls",
+                 "img"      : "darksouls.jpg"
+                },
+                {"nome"     : "zelda",
+                 "img"      : "zeldaWall.jpg"
+                },
+                {"nome"     : "metroid",
+                 "img"      : "metroidWall2.jpg"
+                },
+                {"nome"     : "bird",
+                 "img"      : "bg1.gif"
+                },
+                {"nome"     : "zeldaBOW",
+                 "img"      : "zeldaBOWWall.jpg"
+                }
+            ]
+}
